@@ -8,5 +8,35 @@
         "id":2,
         "image":"https://www.stutteringhelp.org/sites/default/files/pictures/NicoleKidman.jpg",
         "name": "Nicole Kidman"
+    },
+    {
+        "id":3,
+        "image":"https://i.redd.it/rz89sfk1ax011.jpg",
+        "name":"Christina Hendricks"
+    },
+    {
+        "id":4,
+        "image":"https://pmcvariety.files.wordpress.com/2017/06/isla-fisher.jpg?w=1000",
+        "name": "Isla Fisher"
+    },
+    {
+        "id":5,
+        "image":"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/prince-harry-duke-of-sussex-visits-the-royal-marines-news-photo-1032872790-1538659640.jpg",
+        "name":"Prince Harry"
+    },
+    {
+        "id":6,
+        "image":"https://i.kinja-img.com/gawker-media/image/upload/s--780rJoTH--/c_scale,f_auto,fl_progressive,q_80,w_800/ejztd1uav7xjo5iklvwk.png",
+        "name":"THe Little Mermaid"
+    },
+    {
+        "id":7,
+        "image":"http://www.imagesyoulike.com/images/c/32x24/c1556.jpg",
+        "name":"Jessica Rabbit"
+    },
+    {
+        "id":8,
+        "image":"https://vignette.wikia.nocookie.net/p__/images/1/11/Scully_%28X-files%29.jpg/revision/latest?cb=20150927122300&path-prefix=protagonist",
+        "name":"Dana Scully"
     }
 ]
