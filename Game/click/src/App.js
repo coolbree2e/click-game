@@ -11,6 +11,7 @@ class App extends Component {
     score: 0,
     highscore:0,
     pics,
+    message:""
  };
 // function to shuffle all the pictures
 shufflePic = id => {
@@ -42,25 +43,38 @@ shuffle = array => {
 findPicById = id => {
   // TODO search this.state.pics[] for element matching id
   // return that element
-  
-  return(id)
-}
+ return this.state.pics.find(e =>{
+    if(e.id === id){
+      return true
+    } 
+  });
+ 
+};
 
 
 // for the counter to go up and keep the high score
 onClickIncrease= (id)=>{
+  console.log('Image ID:', id);
   const clickedPic = this.findPicById(id);
-  clickedPic.clicked = true;
+  console.log("Clicked Pic:", clickedPic);
+  if(clickedPic.clicked) {
+    console.log('Has been clicked before');
+      this.setState({
+        score:0,
+        message:"game over"
+      });
+    
+  } else {
+    this.setState({ score: this.state.score+1, pics: this.state.pics });
+
+    console.log('Has not been clicked');
+    clickedPic.clicked = true;
+  }
 console.log(clickedPic.clicked,"=====")
-  this.setState({ score: this.state.score+1, pics: this.state.pics });
   console.log("=====",this.state.score);
 };
 // function to reset game
-resetGame = () =>{
-  this.setState({
-    score:0
-  })
-}
+
 
 
 // single function to run all on click funtions
@@ -76,7 +90,10 @@ render() {
   return (
 
     <Wrapper>
-      <Navbar></Navbar>
+      <Navbar score = {this.state.score}
+      message = {this.state.message}
+>
+      </Navbar>
       <Title>Redhead Game </Title>
 
       {this.state.pics.map(pic => (
@@ -87,7 +104,8 @@ render() {
           key={pic.id}
           name={pic.name}
           image={pic.image}
-          
+          message={this.message}
+         
         />
       ))}
     </Wrapper>

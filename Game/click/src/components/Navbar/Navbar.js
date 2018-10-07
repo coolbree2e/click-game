@@ -1,9 +1,11 @@
-import React from "react";
+import React,{Component} from "react";
 import './Navbar.css';
 
 
-const Navbar = props =>(
 
+class Navbar extends Component {
+render(){
+  return (
     <div className = "nav" >
 
 <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -16,17 +18,19 @@ const Navbar = props =>(
       <div className="nav-link" >Clicky Game <span className="sr-only">(current)</span></div>
     </li>
     <li className="nav-item">
-      <div className="nav-link" >High Score</div>
+      <div className="nav-link" >{this.props.message}</div>
     </li>
     <li className="nav-item">
-      <div className="nav-link" >Your Score || </div>
+      <div className="nav-link" >Your Score {this.props.score}</div>
     </li>
    
   </ul>
 </div>
 </nav>
 </div>
-);
+  )
+}
+};
 
 
 export default Navbar;

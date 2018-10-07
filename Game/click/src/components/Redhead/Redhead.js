@@ -6,6 +6,7 @@ const Redhead = props => (
     <div className="img-container">
       <img alt={props.name} src={props.image} />
     </div>
+    <h1>{props.message}</h1>
     <div className="content">
       <ul>
         <li>
